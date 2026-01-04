@@ -1,15 +1,18 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #f0f2f5; /* Un gris más suave y moderno */
 }
 
+/* Esta clase ya la tenías, solo ajusté detalles */
 .login-container {
-    width: 300px;
-    margin: 100px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 6px;
+    /* Quitamos el width fijo y dejamos que Bootstrap controle el ancho con col-md-4 */
+    /* width: 300px;  <-- Bórralo si usas Bootstrap Grid */
+    margin: 0 auto; /* Centrado horizontal */
+    /* El resto déjalo igual o agrega un borde suave */
 }
+
+
+
 
 label {
     display: block;
@@ -28,7 +31,11 @@ button {
     padding: 10px;
 }
 
+
+
+
 .error {
     color: red;
-    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
 }
