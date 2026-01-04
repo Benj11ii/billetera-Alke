@@ -2,7 +2,7 @@
 
 Este proyecto es una simulación de una billetera virtual (E-wallet) desarrollada como parte del **Módulo 2: Fundamentos del desarrollo Front-end**.
 
-El objetivo principal es crear una interfaz de usuario interactiva, segura y agradable, donde los usuarios puedan simular la gestión de sus activos financieros.
+El objetivo principal es crear una interfaz de usuario interactiva, rápida, segura y agradable, donde los usuarios puedan simular la gestión de sus activos financieros.
 
 ## 🚀 Funcionalidades
 
@@ -13,7 +13,7 @@ La aplicación cuenta con las siguientes características:
 - **Transacciones:**
   - Realizar depósitos de dinero.
   - Simular el envío de dinero a contactos.
-  - Ver un historial de movimientos recientes.
+  - Ver un historial de movimientos recientes (ejemplos estáticos para ejercicio).
 - **Diseño Responsive:** Adaptable a dispositivos móviles y escritorio.
 
 ## 🛠️ Tecnologías Utilizadas
@@ -27,7 +27,7 @@ La aplicación cuenta con las siguientes características:
 ## 📂 Estructura del Proyecto
 
 El proyecto está organizado en diferentes vistas para cada funcionalidad:
-- `index.html` (o `login.html`): Página de aterrizaje / inicio de sesión.
+- `login.html`: Página de aterrizaje / inicio de sesión.
 - `menu.html`: Panel principal del usuario.
 - `deposit.html`: Sección para ingresar dinero.
 - `sendmoney.html`: Sección para transferencias.
