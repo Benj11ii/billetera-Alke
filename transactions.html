@@ -1,31 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transacciones</title>
+    <title>Movimientos - Alke Wallet</title>
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Tu CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
+<body class="bg-light">
 
-<body>
+    <!-- === BARRA SUPERIOR (Color Oscuro/Neutro) === -->
+    <nav class="navbar navbar-dark bg-secondary mb-5">
+        <div class="container">
+            <span class="navbar-brand h1 mb-0">📜 Historial de Movimientos</span>
+            <a href="menu.html" class="btn btn-outline-light btn-sm">Volver al Menú</a>
+        </div>
+    </nav>
 
-    <!-- El form debe tener id="depositForm" -->
-    <form id="depositForm">
-        <label>¿Cuánto quieres depositar?</label>
-        <!-- El input debe tener id="amount" -->
-        <input type="number" id="amount" class="form-control" required>
-        <button type="submit" class="btn btn-success">Depositar</button>
-    </form>
+    <!-- === CONTENIDO PRINCIPAL === -->
+    <main class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10"> <!-- Usamos col-10 para que sea ancho pero centrado -->
+                
+                <div class="card shadow border-0 rounded-3">
+                    
+                    <div class="card-header bg-white p-4 d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0 fw-bold">Últimas Transacciones</h4>
+                        <button class="btn btn-sm btn-outline-primary" onclick="window.print()">🖨️ Imprimir</button>
+                    </div>
 
+                    <div class="card-body p-0"> <!-- p-0 para que la tabla llegue a los bordes -->
+                        
+                        <!-- === TABLA RESPONSIVA === -->
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th scope="col" class="ps-4">Fecha</th>
+                                        <th scope="col">Descripción</th>
+                                        <th scope="col" class="text-end pe-4">Monto</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                    <!-- Fila 1: Un Depósito (Verde) -->
+                                    <tr>
+                                        <td class="ps-4 text-muted">04 Ene 2026</td>
+                                        <td>
+                                            <span class="fw-bold">Depósito de fondos</span><br>
+                                            <small class="text-muted">Cajero Automático #402</small>
+                                        </td>
+                                        <!-- text-success: Pone el texto verde -->
+                                        <td class="text-end pe-4 text-success fw-bold">+$500.00</td>
+                                    </tr>
 
-    <!-- Bootstrap JS (opcional por ahora, pero útil después) -->
+                                    <!-- Fila 2: Un Envío (Rojo) -->
+                                    <tr>
+                                        <td class="ps-4 text-muted">03 Ene 2026</td>
+                                        <td>
+                                            <span class="fw-bold">Transferencia Enviada</span><br>
+                                            <small class="text-muted">A: juan.perez@email.com</small>
+                                        </td>
+                                        <!-- text-danger: Pone el texto rojo -->
+                                        <td class="text-end pe-4 text-danger fw-bold">-$120.00</td>
+                                    </tr>
+
+                                    <!-- Fila 3: Otro Gasto -->
+                                    <tr>
+                                        <td class="ps-4 text-muted">02 Ene 2026</td>
+                                        <td>
+                                            <span class="fw-bold">Pago de Servicios</span><br>
+                                            <small class="text-muted">Netflix Suscripción</small>
+                                        </td>
+                                        <td class="text-end pe-4 text-danger fw-bold">-$15.00</td>
+                                    </tr>
+
+                                    <!-- Fila 4: Depósito Inicial -->
+                                    <tr>
+                                        <td class="ps-4 text-muted">01 Ene 2026</td>
+                                        <td>
+                                            <span class="fw-bold">Apertura de Cuenta</span><br>
+                                            <small class="text-muted">Bono de bienvenida</small>
+                                        </td>
+                                        <td class="text-end pe-4 text-success fw-bold">+$1,000.00</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- === FIN TABLA === -->
+
+                    </div>
+                    
+                    <!-- Pie de la tarjeta -->
+                    <div class="card-footer bg-white text-center py-3">
+                        <small class="text-muted">Mostrando los últimos movimientos</small>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- === SCRIPTS === -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Script Lógico -->
     <script src="script.js"></script>
-</body>
 
+</body>
 </html>
